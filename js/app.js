@@ -102,7 +102,7 @@ var getUnanswered = function() {
 		// 	$('.results').append(question);
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
-		// console.log(error);
+		console.log(error);
 	});
 };
 
