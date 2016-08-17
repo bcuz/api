@@ -75,88 +75,37 @@ var showError = function(error){
 
 // takes a string of semi-colon separated tags to be searched
 // for on StackOverflow
-var getUnanswered = function(tags) {
+var getUnanswered = function() {
 
 	// the parameters we need to pass in our request to StackOverflow's API
-	var request = {
-		tagged: tags,
-		site: 'stackoverflow',
-		order: 'desc',
-		sort: 'creation'
-	};
+	// var request = {
+	// 	tagged: tags,
+	// 	site: 'stackoverflow',
+	// 	order: 'desc',
+	// 	sort: 'creation'
+	// };
 
 	$.ajax({
 		url: "http://api.wunderground.com/api/be93c4c3fa5780ba/geolookup/conditions/q/MI/Warren.json",
 		// data: request,
 		dataType: "jsonp",//use jsonp to avoid cross origin issues
-		type: "GET",
+		type: "GET"
 	})
 	.done(function(result){ //this waits for the ajax to return with a succesful promise object
-		// console.log(result.items);
-		var searchResults = showSearchResults(request.tagged, result.items.length);
-		$('.search-results').html(searchResults);
-		//$.each is a higher order function. It takes an array and a function as an argument.
-		//The function is executed once for each item in the array.
-		$.each(result.items, function(i, item) {
-			var question = showQuestion(item);
-			$('.results').append(question);
-		});
+		console.log(result);
+		// var searchResults = showSearchResults(request.tagged, result.items.length);
+		// $('.search-results').html(searchResults);
+		// //$.each is a higher order function. It takes an array and a function as an argument.
+		// //The function is executed once for each item in the array.
+		// $.each(result.items, function(i, item) {
+		// 	var question = showQuestion(item);
+		// 	$('.results').append(question);
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
-		var errorElem = showError(error);
-		$('.search-results').append(errorElem);
+		// console.log(error);
 	});
 };
 
-var topPeeps = function(tag) {
-	tagged_url = 'https://api.stackexchange.com/2.2/tags/' + tag + '/top-answerers/all_time'
-		// the parameters we need to pass in our request to StackOverflow's API
-	var request = {
-		// tagged: tags,
-		site: 'stackoverflow'
-		// order: 'desc',
-		// sort: 'creation'
-	};
-	$.ajax({
-		url: tagged_url,
-		data: request,
-		dataType: "jsonp",//use jsonp to avoid cross origin issues
-		type: "GET",
-	})
-	.done(function(result){ //this waits for the ajax to return with a succesful promise object
-		console.log(result.items);
-		var searchResults = showSearchResults(tag, result.items.length);
-
-		$('.search-results').html(searchResults);
-		// //$.each is a higher order function. It takes an array and a function as an argument.
-		// //The function is executed once for each item in the array.
-		$.each(result.items, function(i, item) {
-			var answer = showAnswerers(item);
-			$('.results').append(answer);
-		});
-	})
-	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
-		var errorElem = showError(error);
-		$('.search-results').append(errorElem);
-	});
-}
-	$('.unanswered-getter').submit( function(e){
-		e.preventDefault();
-		// zero out results if previous search has run
-		$('.results').html('');
-		// get the value of the tags the user submitted
-		var tags = $(this).find("input[name='tags']").val();
-		getUnanswered(tags);
-	});
-
-	$(".inspiration-getter").submit(function(e) {
-
-		$('.results').html('');
-		e.preventDefault();
-
-		var tag = $("input[name='answerers']").val();
-		topPeeps(tag)
-
-	})
+	getUnanswered();
 });
 
