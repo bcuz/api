@@ -115,7 +115,8 @@ var getUnanswered = function() {
 		scoreElem.text(result.current_observation.relative_humidity)
 
 		var postsElem = template.find(".posts")
-		postsElem.text(result.current_observation.observation_time)
+		var custom_time = result.current_observation.observation_time.substring(16)
+		postsElem.text(custom_time)
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 		console.log(error);
