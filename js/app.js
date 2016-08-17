@@ -86,7 +86,7 @@ var getUnanswered = function() {
 	// };
 
 	$.ajax({
-		url: "http://api.wunderground.com/api/be93c4c3fa5780ba/geolookup/conditions/q/MI/Warren.json",
+		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/geolookup/conditions/q/MI/Warren.json",
 		// data: request,
 		dataType: "jsonp",//use jsonp to avoid cross origin issues
 		type: "GET"
