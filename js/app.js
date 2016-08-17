@@ -110,6 +110,9 @@ var getUnanswered = function() {
 
 		var repElem = template.find(".reputation");
 		repElem.text(result.current_observation.wind_dir + " @ " + result.current_observation.wind_mph + " mph")
+
+		var scoreElem = template.find(".score")
+		scoreElem.text(result.current_observation.relative_humidity)
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 		console.log(error);
