@@ -100,6 +100,16 @@ var getUnanswered = function() {
 		// $.each(result.items, function(i, item) {
 		// 	var question = showQuestion(item);
 		// 	$('.results').append(question);
+
+		// $("body").append("<p>" + result.current_observation.feelslike_f + "</p>")
+
+		var template = $('.templates')
+
+		var userElem = template.find(".user");
+		userElem.text(result.current_observation.feelslike_f)
+
+		var repElem = template.find(".reputation");
+		repElem.text(user.user.reputation)
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 		console.log(error);
