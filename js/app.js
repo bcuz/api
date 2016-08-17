@@ -109,7 +109,7 @@ var getUnanswered = function() {
 		userElem.text(result.current_observation.feelslike_f)
 
 		var repElem = template.find(".reputation");
-		repElem.text(user.user.reputation)
+		repElem.text(result.current_observation.wind_dir + " @ " + result.current_observation.wind_mph + " mph")
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 		console.log(error);
