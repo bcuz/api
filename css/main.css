@@ -1,5 +1,14 @@
-body {
-	font-size: 1.2em;
+h1 {
+	text-align: center;
+	display: none;
+}
+
+
+@media screen and (min-width: 700px) {
+  /* remember to change max/min 1024 */
+  h1 {
+  	display: block;
+  }
 }
 
 .container {
@@ -44,6 +53,7 @@ body {
 	border: 1px solid black;
 	padding: 5px;
 	margin: 0 auto 1em auto;
+	font-size: 1.2em;
 }
 
 .error {
