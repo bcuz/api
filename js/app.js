@@ -86,8 +86,8 @@ var getUnanswered = function(tags) {
 	};
 
 	$.ajax({
-		url: "https://api.stackexchange.com/2.2/questions/unanswered",
-		data: request,
+		url: "http://api.wunderground.com/api/be93c4c3fa5780ba/geolookup/conditions/q/MI/Warren.json",
+		// data: request,
 		dataType: "jsonp",//use jsonp to avoid cross origin issues
 		type: "GET",
 	})
