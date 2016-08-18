@@ -46,6 +46,48 @@ $(document).ready( function() {
 	// return result;
 }
 
+
+var showForecast = function(item) {
+
+	var template = $('.templates .answers').clone();
+
+	var userElem = template.find(".user");
+	userElem.text(item.current_observation.feelslike_f)
+
+	var repElem = template.find(".reputation");
+	repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph")
+
+	var scoreElem = template.find(".score")
+	scoreElem.text(item.current_observation.relative_humidity)
+
+	var postsElem = template.find(".posts")
+	var custom_time = item.current_observation.observation_time.substring(16)
+	postsElem.text(custom_time)
+
+	$("body").append("<p>hi</p>")
+
+	return template;
+	// var result = $('.templates .answers').clone();
+
+	// var userElem = result.find(".user a");
+	// userElem.attr('href', user.user.link)
+	// userElem.text(user.user.display_name)
+
+	// var repElem = result.find(".reputation");
+	// repElem.text(user.user.reputation)
+
+	// var scoreElem = result.find(".score")
+	// scoreElem.text(user.score)
+
+	// var postsElem = result.find(".posts")
+	// postsElem.text(user.post_count)
+
+	// var postsElem = result.find(".type")
+	// postsElem.text(user.user.user_type)
+
+	// return result;
+}
+
 // var showQuestion = function(question) {
 
 // 	// clone our result template code
