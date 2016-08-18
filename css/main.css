@@ -3,6 +3,10 @@ h1 {
 	display: none;
 }
 
+p {
+	text-align: center;
+}
+
 
 @media screen and (min-width: 700px) {
   /* remember to change max/min 1024 */
