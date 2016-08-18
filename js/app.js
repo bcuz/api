@@ -22,6 +22,8 @@ $(document).ready( function() {
 	var custom_time = item.current_observation.observation_time.substring(16)
 	postsElem.text(custom_time)
 
+	$("body").append("<p>hi</p>")
+
 	return template;
 	// var result = $('.templates .answers').clone();
 
@@ -119,7 +121,7 @@ var getUnanswered = function() {
 		// 	$('.results').append(question);
 
 		var answer = showWeather(result)
-		$("body").append(answer)
+		$("body").prepend(answer)
 
 
 	})
