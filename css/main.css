@@ -7,7 +7,14 @@ p {
 	text-align: center;
 }
 
+dt {
+	width: 35%;
+	float: left;
+}
 
+dd {
+	text-align: right;
+}
 @media screen and (min-width: 700px) {
   /* remember to change max/min 1024 */
   h1 {
