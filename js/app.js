@@ -33,7 +33,7 @@ var showForecast = function(item) {
 	var template = $('.templates .forecast').clone();
 
 	var userElem = template.find(".one_day");
-	userElem.text(item.forecast.txt_forecast)
+	userElem.text(item.forecast.txt_forecast.forecastday[2].title + ": " + item.forecast.txt_forecast.forecastday[2].fcttext)
 
 	var repElem = template.find(".two_day");
 	// repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph")
