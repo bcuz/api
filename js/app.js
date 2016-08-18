@@ -22,7 +22,7 @@ $(document).ready( function() {
 	var custom_time = item.current_observation.observation_time.substring(16)
 	postsElem.text(custom_time)
 
-	$("body").append("<p>hi</p>")
+	// $("body").append("<p>hi</p>")
 
 	return template;
 }
