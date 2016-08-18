@@ -94,7 +94,7 @@ var showError = function(error){
 
 // takes a string of semi-colon separated tags to be searched
 // for on StackOverflow
-var getUnanswered = function() {
+var getCurrent = function() {
 
 	// the parameters we need to pass in our request to StackOverflow's API
 	// var request = {
@@ -130,7 +130,7 @@ var getUnanswered = function() {
 	});
 };
 
-var getUnanswered = function() {
+var getForecast = function() {
 
 	// the parameters we need to pass in our request to StackOverflow's API
 	// var request = {
@@ -141,7 +141,7 @@ var getUnanswered = function() {
 	// };
 
 	$.ajax({
-		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/geolookup/conditions/q/MI/Warren.json",
+		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/forecast/q/MI/Warren.json",
 		// data: request,
 		dataType: "jsonp",//use jsonp to avoid cross origin issues
 		type: "GET"
@@ -168,6 +168,6 @@ var getUnanswered = function() {
 
 
 
-	getUnanswered();
+	getCurrent();
 });
 
