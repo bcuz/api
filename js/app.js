@@ -49,22 +49,13 @@ $(document).ready( function() {
 
 var showForecast = function(item) {
 
-	var template = $('.templates .answers').clone();
+	var template = $('.templates .forecast').clone();
 
-	var userElem = template.find(".user");
-	userElem.text(item.current_observation.feelslike_f)
+	var userElem = template.find(".one_day");
+	userElem.text(item.forecast.txt_forecast)
 
-	var repElem = template.find(".reputation");
-	repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph")
-
-	var scoreElem = template.find(".score")
-	scoreElem.text(item.current_observation.relative_humidity)
-
-	var postsElem = template.find(".posts")
-	var custom_time = item.current_observation.observation_time.substring(16)
-	postsElem.text(custom_time)
-
-	$("body").append("<p>hi</p>")
+	var repElem = template.find(".two_day");
+	// repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph")
 
 	return template;
 	// var result = $('.templates .answers').clone();
@@ -153,7 +144,7 @@ var getCurrent = function() {
 		type: "GET"
 	})
 	.done(function(result){ //this waits for the ajax to return with a succesful promise object
-		// console.log(result);
+		console.log(result);
 		// var searchResults = showSearchResults(request.tagged, result.items.length);
 		// $('.search-results').html(searchResults);
 		// //$.each is a higher order function. It takes an array and a function as an argument.
@@ -198,8 +189,8 @@ var getForecast = function() {
 		// 	var question = showQuestion(item);
 		// 	$('.results').append(question);
 
-		// var answer = showWeather(result)
-		// $("body").prepend(answer)
+		var answer = showForecast(result)
+		$("body").prepend(answer)
 
 
 	})
