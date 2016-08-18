@@ -135,7 +135,7 @@ var getCurrent = function() {
 		// 	$('.results').append(question);
 
 		var answer = showCurrent(result)
-		$("body").prepend(answer)
+		$(".container").prepend(answer)
 
 
 	})
@@ -171,7 +171,7 @@ var getForecast = function() {
 		// 	$('.results').append(question);
 
 		var answer = showForecast(result)
-		$("body").append(answer)
+		$(".container").append(answer)
 
 
 	})

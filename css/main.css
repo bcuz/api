@@ -15,10 +15,10 @@ p {
   }
 }
 
-.container {
+/*.container {
 	margin: 3em auto;
 	width: 600px;
-}
+}*/
 
 .hidden {
 	display: none;
