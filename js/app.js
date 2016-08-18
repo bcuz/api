@@ -5,26 +5,44 @@
 
 
 $(document).ready( function() {
-	var showAnswerers = function(user) {
-	var result = $('.templates .answers').clone();
+	var showAnswerers = function(item) {
 
-	var userElem = result.find(".user a");
-	userElem.attr('href', user.user.link)
-	userElem.text(user.user.display_name)
 
-	var repElem = result.find(".reputation");
-	repElem.text(user.user.reputation)
+	var template = $('.templates .answers').clone();
 
-	var scoreElem = result.find(".score")
-	scoreElem.text(user.score)
+	var userElem = template.find(".user");
+	userElem.text(item.current_observation.feelslike_f)
 
-	var postsElem = result.find(".posts")
-	postsElem.text(user.post_count)
+	var repElem = template.find(".reputation");
+	repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph")
 
-	var postsElem = result.find(".type")
-	postsElem.text(user.user.user_type)
+	var scoreElem = template.find(".score")
+	scoreElem.text(item.current_observation.relative_humidity)
 
-	return result;
+	var postsElem = template.find(".posts")
+	var custom_time = item.current_observation.observation_time.substring(16)
+	postsElem.text(custom_time)
+
+	return template;
+	// var result = $('.templates .answers').clone();
+
+	// var userElem = result.find(".user a");
+	// userElem.attr('href', user.user.link)
+	// userElem.text(user.user.display_name)
+
+	// var repElem = result.find(".reputation");
+	// repElem.text(user.user.reputation)
+
+	// var scoreElem = result.find(".score")
+	// scoreElem.text(user.score)
+
+	// var postsElem = result.find(".posts")
+	// postsElem.text(user.post_count)
+
+	// var postsElem = result.find(".type")
+	// postsElem.text(user.user.user_type)
+
+	// return result;
 }
 
 // var showQuestion = function(question) {
@@ -101,22 +119,10 @@ var getUnanswered = function() {
 		// 	var question = showQuestion(item);
 		// 	$('.results').append(question);
 
-		// $("body").append("<p>" + result.current_observation.feelslike_f + "</p>")
+		var answer = showAnswerers(result)
+		$("body").append(answer)
 
-		var template = $('.templates')
 
-		var userElem = template.find(".user");
-		userElem.text(result.current_observation.feelslike_f)
-
-		var repElem = template.find(".reputation");
-		repElem.text(result.current_observation.wind_dir + " @ " + result.current_observation.wind_mph + " mph")
-
-		var scoreElem = template.find(".score")
-		scoreElem.text(result.current_observation.relative_humidity)
-
-		var postsElem = template.find(".posts")
-		var custom_time = result.current_observation.observation_time.substring(16)
-		postsElem.text(custom_time)
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 		console.log(error);
