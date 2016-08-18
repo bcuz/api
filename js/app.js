@@ -1,12 +1,11 @@
 // this function takes the question object returned by the StackOverflow request
 // and returns new result to be appended to DOM
 
-
+// good point for not having forecast.
 
 
 $(document).ready( function() {
 	var showWeather = function(item) {
-
 
 	var template = $('.templates .answers').clone();
 
