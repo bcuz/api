@@ -5,7 +5,7 @@
 
 
 $(document).ready( function() {
-	var showAnswerers = function(item) {
+	var showWeather = function(item) {
 
 
 	var template = $('.templates .answers').clone();
@@ -119,7 +119,7 @@ var getUnanswered = function() {
 		// 	var question = showQuestion(item);
 		// 	$('.results').append(question);
 
-		var answer = showAnswerers(result)
+		var answer = showWeather(result)
 		$("body").append(answer)
 
 
