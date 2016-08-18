@@ -5,7 +5,7 @@
 
 
 $(document).ready( function() {
-	var showWeather = function(item) {
+	var showCurrent = function(item) {
 
 	var template = $('.templates .answers').clone();
 
@@ -120,7 +120,7 @@ var getCurrent = function() {
 		// 	var question = showQuestion(item);
 		// 	$('.results').append(question);
 
-		var answer = showWeather(result)
+		var answer = showCurrent(result)
 		$("body").prepend(answer)
 
 
@@ -156,8 +156,8 @@ var getForecast = function() {
 		// 	var question = showQuestion(item);
 		// 	$('.results').append(question);
 
-		var answer = showWeather(result)
-		$("body").prepend(answer)
+		// var answer = showWeather(result)
+		// $("body").prepend(answer)
 
 
 	})
