@@ -135,7 +135,7 @@ var getCurrent = function() {
 		// 	$('.results').append(question);
 
 		var answer = showCurrent(result)
-		$("body").append(answer)
+		$("body").prepend(answer)
 
 
 	})
