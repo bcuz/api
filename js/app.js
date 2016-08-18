@@ -36,7 +36,7 @@ var showForecast = function(item) {
 	userElem.text(item.forecast.txt_forecast.forecastday[2].title + ": " + item.forecast.txt_forecast.forecastday[2].fcttext)
 
 	var repElem = template.find(".two_day");
-	// repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph")
+	repElem.text(item.forecast.txt_forecast.forecastday[4].title + ": " + item.forecast.txt_forecast.forecastday[4].fcttext)
 
 	return template;
 	// var result = $('.templates .answers').clone();
