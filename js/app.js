@@ -1,7 +1,7 @@
 // this function takes the question object returned by the StackOverflow request
 // and returns new result to be appended to DOM
 
-// good point for not having forecast.
+// this is how i liek the thing for myself
 
 
 $(document).ready( function() {
