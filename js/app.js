@@ -6,7 +6,7 @@
 
 $(document).ready( function() {
 
-	$("input[name='answerers']").val("");
+	// $("input[name='answerers']").val("");
 
 
 	var showCurrent = function(item) {
