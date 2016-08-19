@@ -118,10 +118,10 @@ var getCurrent = function(city, state) {
 	});
 };
 
-var getForecast = function() {
+var getForecast = function(city, state) {
 
 	$.ajax({
-		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/forecast/q/MI/Warren.json",
+		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/forecast/q/" + state + "/" + city + ".json",
 		// data: request,
 		dataType: "jsonp",//use jsonp to avoid cross origin issues
 		type: "GET"
@@ -148,6 +148,8 @@ var getForecast = function() {
 
 	$('form').submit(function(e){
 		e.preventDefault();
+
+		$('.container').html('');
 		// zero out results if previous search has run
 		// get the value of the tags the user submitted
 		var city = $(this).find("input[name='answerers']").val();
@@ -155,9 +157,8 @@ var getForecast = function() {
 		// getUnanswered(tags);
 
 		getCurrent(city, state);
+		getForecast(city, state)
 	});
 
-	getCurrent();
-	getForecast();
 });
 
