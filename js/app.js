@@ -13,7 +13,7 @@ $(document).ready( function() {
 	userElem.text(parseInt(item.current_observation.feelslike_f))
 
 	var repElem = template.find(".reputation");
-	repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph")
+	repElem.text(item.current_observation.wind_dir + ", " + item.current_observation.wind_mph + " mph")
 
 	var scoreElem = template.find(".score")
 	scoreElem.text(item.current_observation.relative_humidity)
