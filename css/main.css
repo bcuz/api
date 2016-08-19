@@ -30,7 +30,7 @@ p {
 }
 
 dt {
-	width: 35%;
+	width: 30%;
 	float: left;
 }
 
@@ -84,7 +84,7 @@ dd {
 .result {
 	max-width: 300px;
 	border: 1px solid black;
-	padding: 5px;
+	padding: 10px;
 	margin: 0 auto 1em auto;
 	/*font-size: 1.0em;*/
 }
