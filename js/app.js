@@ -19,7 +19,7 @@ $(document).ready( function() {
 	scoreElem.text(item.current_observation.relative_humidity)
 
 	var postsElem = template.find(".posts")
-	var custom_time = item.current_observation.observation_time.substring(16)
+	var custom_time = item.current_observation.observation_time.substring(16, 34)
 	postsElem.text(custom_time)
 
 	// $("body").append("<p>hi</p>")
