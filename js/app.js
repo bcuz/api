@@ -40,25 +40,6 @@ var showForecast = function(item) {
 	repElem.text(item.forecast.txt_forecast.forecastday[4].title + ": " + item.forecast.txt_forecast.forecastday[4].fcttext)
 
 	return template;
-	// var result = $('.templates .answers').clone();
-
-	// var userElem = result.find(".user a");
-	// userElem.attr('href', user.user.link)
-	// userElem.text(user.user.display_name)
-
-	// var repElem = result.find(".reputation");
-	// repElem.text(user.user.reputation)
-
-	// var scoreElem = result.find(".score")
-	// scoreElem.text(user.score)
-
-	// var postsElem = result.find(".posts")
-	// postsElem.text(user.post_count)
-
-	// var postsElem = result.find(".type")
-	// postsElem.text(user.user.user_type)
-
-	// return result;
 }
 
 // var showQuestion = function(question) {
