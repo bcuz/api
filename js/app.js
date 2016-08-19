@@ -90,10 +90,10 @@ var showError = function(error){
 
 // takes a string of semi-colon separated tags to be searched
 // for on StackOverflow
-var getCurrent = function() {
+var getCurrent = function(city, state) {
 
 	$.ajax({
-		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/geolookup/conditions/q/MI/Warren.json",
+		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/geolookup/conditions/q/" + state + "/" + city  + ".json",
 		// data: request,
 		dataType: "jsonp",//use jsonp to avoid cross origin issues
 		type: "GET"
@@ -146,7 +146,16 @@ var getForecast = function() {
 	});
 };
 
+	$('form').submit(function(e){
+		e.preventDefault();
+		// zero out results if previous search has run
+		// get the value of the tags the user submitted
+		var city = $(this).find("input[name='answerers']").val();
+		var state = $(this).find("select[name='state']").val();
+		// getUnanswered(tags);
 
+		getCurrent(city, state);
+	});
 
 	getCurrent();
 	getForecast();
