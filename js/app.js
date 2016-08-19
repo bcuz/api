@@ -92,14 +92,6 @@ var showError = function(error){
 // for on StackOverflow
 var getCurrent = function() {
 
-	// the parameters we need to pass in our request to StackOverflow's API
-	// var request = {
-	// 	tagged: tags,
-	// 	site: 'stackoverflow',
-	// 	order: 'desc',
-	// 	sort: 'creation'
-	// };
-
 	$.ajax({
 		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/geolookup/conditions/q/MI/Warren.json",
 		// data: request,
@@ -127,14 +119,6 @@ var getCurrent = function() {
 };
 
 var getForecast = function() {
-
-	// the parameters we need to pass in our request to StackOverflow's API
-	// var request = {
-	// 	tagged: tags,
-	// 	site: 'stackoverflow',
-	// 	order: 'desc',
-	// 	sort: 'creation'
-	// };
 
 	$.ajax({
 		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/forecast/q/MI/Warren.json",
