@@ -114,7 +114,8 @@ var getCurrent = function(city, state) {
 
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
-		console.log(error);
+		// console.log('ay');
+		// $(".container").append("<p>" + error.response.error.description + "</p>")
 	});
 };
 
