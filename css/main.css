@@ -48,6 +48,10 @@ dd {
   h1 {
   	display: block;
   }
+
+  p {
+  	text-align: left;
+  }
 }
 
 /*.container {
