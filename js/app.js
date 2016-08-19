@@ -2,7 +2,7 @@
 // and returns new result to be appended to DOM
 
 // this is how i liek the thing for myself
-
+// can add the thing where it prepopulates the input field with specific cities
 
 $(document).ready( function() {
 
