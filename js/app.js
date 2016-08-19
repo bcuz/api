@@ -5,6 +5,10 @@
 
 
 $(document).ready( function() {
+
+	$("input[name='answerers']").val("");
+
+
 	var showCurrent = function(item) {
 
 	var template = $('.templates .answers').clone();
