@@ -19,6 +19,7 @@ $(document).ready( function() {
 	scoreElem.text(item.current_observation.relative_humidity)
 
 	var postsElem = template.find(".posts")
+	// time zone will have to be put back in when adjusted for other zones
 	var custom_time = item.current_observation.observation_time.substring(16, 34)
 	postsElem.text(custom_time)
 
