@@ -40,8 +40,6 @@ $(document).ready( function() {
 	var custom_time = item.current_observation.observation_time.substring(16, 34)
 	postsElem.text(custom_time)
 
-	// $("body").append("<p>hi</p>")
-
 	return template;
 }
 
@@ -58,38 +56,6 @@ var showForecast = function(item) {
 
 	return template;
 }
-
-// var showQuestion = function(question) {
-
-// 	// clone our result template code
-// 	var result = $('.templates .question').clone();
-
-// 	// Set the question properties in result
-// 	var questionElem = result.find('.question-text a');
-// 	questionElem.attr('href', question.link);
-// 	questionElem.text(question.title);
-
-// 	// set the date asked property in result
-// 	var asked = result.find('.asked-date');
-// 	var date = new Date(1000*question.creation_date);
-// 	asked.text(date.toString());
-
-// 	// set the .viewed for question property in result
-// 	var viewed = result.find('.viewed');
-// 	viewed.text(question.view_count);
-
-// 	// set some properties related to asker
-// 	var asker = result.find('.asker');
-// 	asker.html('<p>Name: <a target="_blank" '+
-// 		'href=http://stackoverflow.com/users/' + question.owner.user_id + ' >' +
-// 		question.owner.display_name +
-// 		'</a></p>' +
-// 		'<p>Reputation: ' + question.owner.reputation + '</p>'
-// 	);
-
-// 	return result;
-// };
-
 
 // this function takes the results object from StackOverflow
 // and returns the number of results and tags to be appended to DOM
@@ -111,7 +77,6 @@ var getCurrent = function(city, state) {
 
 	$.ajax({
 		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/geolookup/conditions/q/" + state + "/" + city  + ".json",
-		// data: request,
 		dataType: "jsonp",//use jsonp to avoid cross origin issues
 		type: "GET"
 	})
