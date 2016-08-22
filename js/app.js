@@ -5,8 +5,8 @@
 // can add the thing where it prepopulates the input field with specific cities
 
 $(document).ready( function() {
-
-	// $("select[name='state']").val("AK");
+	$("input[name='city']").val("");
+	$("select[name='state']").val("AK");
 
 	var availableCities = [
       "Warren",
