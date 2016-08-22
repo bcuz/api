@@ -105,7 +105,7 @@ dd {
 }
 
 ul.ui-autocomplete {
-  width: 300px;
+  width: 120px;
   list-style: none;
   padding: 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
@@ -117,11 +117,15 @@ ul.ui-autocomplete {
 
 ul.ui-autocomplete li {
   padding: 10px;
-  font-size: 20px;
+  font-size: 1.1em;
   font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 ul.ui-autocomplete li:hover {
   background-color: #ddd;
+}
+
+.ui-helper-hidden-accessible {
+	display: none;
 }

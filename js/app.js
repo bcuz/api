@@ -7,12 +7,17 @@
 $(document).ready( function() {
 
 	var availableTags = [
-      "Jacksonville",
-      "Baltimore",
-      "Dubai"
+      "Warren",
+      "Chicago",
+      "New York",
+      "Los Angeles",
+      "Boca Raton",
+      "Houston",
+      "Dallas",
+      "Detroit"
     ];
 
-	$("#tags").autocomplete({
+	$("input[name='answerers']").autocomplete({
       source: availableTags
     });
 
