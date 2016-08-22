@@ -6,6 +6,8 @@
 
 $(document).ready( function() {
 
+	// $("select[name='state']").val("AK");
+
 	var availableCities = [
       "Warren",
       "Chicago",
