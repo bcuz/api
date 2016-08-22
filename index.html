@@ -8,90 +8,92 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<h1>Weatheryo</h1>
-	<form>
-		<input type="text" placeholder="Enter City" name="city" size="20" required>
-		<select name="state" size="1">
-  <option value="AK">AK</option>
-  <option value="AL">AL</option>
-  <option value="AR">AR</option>
-  <option value="AZ">AZ</option>
-  <option value="CA">CA</option>
-  <option value="CO">CO</option>
-  <option value="CT">CT</option>
-  <option value="DC">DC</option>
-  <option value="DE">DE</option>
-  <option value="FL">FL</option>
-  <option value="GA">GA</option>
-  <option value="HI">HI</option>
-  <option value="IA">IA</option>
-  <option value="ID">ID</option>
-  <option value="IL">IL</option>
-  <option value="IN">IN</option>
-  <option value="KS">KS</option>
-  <option value="KY">KY</option>
-  <option value="LA">LA</option>
-  <option value="MA">MA</option>
-  <option value="MD">MD</option>
-  <option value="ME">ME</option>
-  <option value="MI">MI</option>
-  <option value="MN">MN</option>
-  <option value="MO">MO</option>
-  <option value="MS">MS</option>
-  <option value="MT">MT</option>
-  <option value="NC">NC</option>
-  <option value="ND">ND</option>
-  <option value="NE">NE</option>
-  <option value="NH">NH</option>
-  <option value="NJ">NJ</option>
-  <option value="NM">NM</option>
-  <option value="NV">NV</option>
-  <option value="NY">NY</option>
-  <option value="OH">OH</option>
-  <option value="OK">OK</option>
-  <option value="OR">OR</option>
-  <option value="PA">PA</option>
-  <option value="RI">RI</option>
-  <option value="SC">SC</option>
-  <option value="SD">SD</option>
-  <option value="TN">TN</option>
-  <option value="TX">TX</option>
-  <option value="UT">UT</option>
-  <option value="VA">VA</option>
-  <option value="VT">VT</option>
-  <option value="WA">WA</option>
-  <option value="WI">WI</option>
-  <option value="WV">WV</option>
-  <option value="WY">WY</option>
-</select>
-		<input type="submit" value="Go">
-	</form>
-	<div class="results-container">
-		Enter your city and state. Results will be in your time zone
-		</div>
-		<div class="templates hidden">
-		<dl class="result current-weather">
-			<dt>Feel:</dt>
-				<dd class="user"></dd>
-			<dt>Wind:</dt>
-				<dd class="reputation"></dd>
-			<dt>Humidity:</dt>
-				<dd class="score"></dd>
-			<dt>Updated:</dt>
-			<dd class="posts"></dd>
-		</dl>
-	</div>
-		<div class="templates hidden">
-			<div class="forecast">
-				<p class="one_day"></p>
-				<p class="two_day"></p>
-			</div>
-		<!-- <div class="error">
-			<p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
-		</div> -->
-	</div>
+	<div class="page-wrap">
+    <h1>Weatheryo</h1>
+    <form>
+      <input type="text" placeholder="Enter City" name="city" size="20" required>
+      <select name="state" size="1">
+      <option value="AK">AK</option>
+      <option value="AL">AL</option>
+      <option value="AR">AR</option>
+      <option value="AZ">AZ</option>
+      <option value="CA">CA</option>
+      <option value="CO">CO</option>
+      <option value="CT">CT</option>
+      <option value="DC">DC</option>
+      <option value="DE">DE</option>
+      <option value="FL">FL</option>
+      <option value="GA">GA</option>
+      <option value="HI">HI</option>
+      <option value="IA">IA</option>
+      <option value="ID">ID</option>
+      <option value="IL">IL</option>
+      <option value="IN">IN</option>
+      <option value="KS">KS</option>
+      <option value="KY">KY</option>
+      <option value="LA">LA</option>
+      <option value="MA">MA</option>
+      <option value="MD">MD</option>
+      <option value="ME">ME</option>
+      <option value="MI">MI</option>
+      <option value="MN">MN</option>
+      <option value="MO">MO</option>
+      <option value="MS">MS</option>
+      <option value="MT">MT</option>
+      <option value="NC">NC</option>
+      <option value="ND">ND</option>
+      <option value="NE">NE</option>
+      <option value="NH">NH</option>
+      <option value="NJ">NJ</option>
+      <option value="NM">NM</option>
+      <option value="NV">NV</option>
+      <option value="NY">NY</option>
+      <option value="OH">OH</option>
+      <option value="OK">OK</option>
+      <option value="OR">OR</option>
+      <option value="PA">PA</option>
+      <option value="RI">RI</option>
+      <option value="SC">SC</option>
+      <option value="SD">SD</option>
+      <option value="TN">TN</option>
+      <option value="TX">TX</option>
+      <option value="UT">UT</option>
+      <option value="VA">VA</option>
+      <option value="VT">VT</option>
+      <option value="WA">WA</option>
+      <option value="WI">WI</option>
+      <option value="WV">WV</option>
+      <option value="WY">WY</option>
+    </select>
+      <input type="submit" value="Go">
+    </form>
+    <div class="results-container">
+      Enter your city and state. Results will be in your time zone
+      </div>
+      <div class="templates hidden">
+      <dl class="result current-weather">
+        <dt>Feel:</dt>
+          <dd class="user"></dd>
+        <dt>Wind:</dt>
+          <dd class="reputation"></dd>
+        <dt>Humidity:</dt>
+          <dd class="score"></dd>
+        <dt>Updated:</dt>
+        <dd class="posts"></dd>
+      </dl>
+    </div>
+      <div class="templates hidden">
+        <div class="forecast">
+          <p class="one_day"></p>
+          <p class="two_day"></p>
+        </div>
+      <!-- <div class="error">
+        <p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
+      </div> -->
+    </div>
+  </div>
 
-
+  <footer class="site-footer">Data from Weather Undeground</footer>
 	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 	<script src="js/app.js"></script>
