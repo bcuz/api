@@ -105,7 +105,6 @@ var getForecast = function(city, state) {
 
 	$.ajax({
 		url: "https://api.wunderground.com/api/be93c4c3fa5780ba/forecast/q/" + state + "/" + city + ".json",
-		// data: request,
 		dataType: "jsonp",//use jsonp to avoid cross origin issues
 		type: "GET"
 	})
