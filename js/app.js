@@ -4,7 +4,7 @@
 // this is how i liek the thing for myself
 // can add the thing where it prepopulates the input field with specific cities
 
-$(document).ready( function() {
+$(function() {
 	$("input[name='city']").val("");
 	$("select[name='state']").val("AK");
 
