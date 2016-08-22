@@ -26,7 +26,7 @@ $(document).ready( function() {
 
 	var showCurrent = function(item) {
 
-	var template = $('.templates .answers').clone();
+	var template = $('.templates .current-weather').clone();
 
 	var userElem = template.find(".user");
 	userElem.text(parseInt(item.current_observation.feelslike_f) + " degrees")
