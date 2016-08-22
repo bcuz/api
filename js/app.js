@@ -1,8 +1,6 @@
 // this function takes the question object returned by the StackOverflow request
 // and returns new result to be appended to DOM
 
-// can add the thing where it prepopulates the input field with specific cities
-
 $(function() {
 	$("input[name='city']").val("");
 	$("select[name='state']").val("AK");
