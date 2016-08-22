@@ -6,7 +6,7 @@
 
 $(document).ready( function() {
 
-	var availableTags = [
+	var availableCities = [
       "Warren",
       "Chicago",
       "New York",
@@ -18,7 +18,7 @@ $(document).ready( function() {
     ];
 
 	$("input[name='city']").autocomplete({
-      source: availableTags
+      source: availableCities
     });
 
 
