@@ -17,7 +17,7 @@ $(document).ready( function() {
       "Detroit"
     ];
 
-	$("input[name='answerers']").autocomplete({
+	$("input[name='city']").autocomplete({
       source: availableTags
     });
 
@@ -170,7 +170,7 @@ var getForecast = function(city, state) {
 		$('.container').html('');
 		// zero out results if previous search has run
 		// get the value of the tags the user submitted
-		var city = $(this).find("input[name='answerers']").val();
+		var city = $(this).find("input[name='city']").val();
 		var state = $(this).find("select[name='state']").val();
 		// getUnanswered(tags);
 
