@@ -93,13 +93,13 @@ var getCurrent = function(city, state) {
 		// 	$('.results').append(question);
 
 		var answer = showCurrent(result)
-		$(".container").prepend(answer)
+		$(".results-container").prepend(answer)
 
 
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 		// console.log('ay');
-		// $(".container").append("<p>" + error.response.error.description + "</p>")
+		// $(".results-container").append("<p>" + error.response.error.description + "</p>")
 	});
 };
 
@@ -121,7 +121,7 @@ var getForecast = function(city, state) {
 		// 	$('.results').append(question);
 
 		var answer = showForecast(result)
-		$(".container").append(answer)
+		$(".results-container").append(answer)
 
 
 	})
@@ -133,7 +133,7 @@ var getForecast = function(city, state) {
 	$('form').submit(function(e){
 		e.preventDefault();
 
-		$('.container').html('');
+		$('.results-container').html('');
 		// zero out results if previous search has run
 		// get the value of the tags the user submitted
 		var city = $(this).find("input[name='city']").val();
