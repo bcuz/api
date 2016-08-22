@@ -135,7 +135,6 @@ var getForecast = function(city, state) {
 		// get the value of the tags the user submitted
 		var city = $(this).find("input[name='city']").val();
 		var state = $(this).find("select[name='state']").val();
-		// getUnanswered(tags);
 
 		getCurrent(city, state);
 		getForecast(city, state)
