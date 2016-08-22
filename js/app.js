@@ -132,7 +132,7 @@ var getForecast = function(city, state) {
 
 		$('.results-container').html('');
 		// zero out results if previous search has run
-		// get the value of the tags the user submitted
+		// get the value of info user is submitting
 		var city = $(this).find("input[name='city']").val();
 		var state = $(this).find("select[name='state']").val();
 
