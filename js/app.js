@@ -80,7 +80,7 @@ var getCurrent = function(city, state) {
 		type: "GET"
 	})
 	.done(function(result){ //this waits for the ajax to return with a succesful promise object
-		console.log(result);
+		// console.log(result);
 		// var searchResults = showSearchResults(request.tagged, result.items.length);
 		// $('.search-results').html(searchResults);
 		// //$.each is a higher order function. It takes an array and a function as an argument.
@@ -108,7 +108,7 @@ var getForecast = function(city, state) {
 		type: "GET"
 	})
 	.done(function(result){ //this waits for the ajax to return with a succesful promise object
-		console.log(result);
+		// console.log(result);
 		// var searchResults = showSearchResults(request.tagged, result.items.length);
 		// $('.search-results').html(searchResults);
 		// //$.each is a higher order function. It takes an array and a function as an argument.
