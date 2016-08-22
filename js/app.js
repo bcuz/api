@@ -6,7 +6,15 @@
 
 $(document).ready( function() {
 
-	// $("input[name='answerers']").val("");
+	var availableTags = [
+      "Jacksonville",
+      "Baltimore",
+      "Dubai"
+    ];
+
+	$("#tags").autocomplete({
+      source: availableTags
+    });
 
 
 	var showCurrent = function(item) {
