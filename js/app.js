@@ -28,8 +28,7 @@ $(function() {
 	var userElem = template.find(".user");
 
 	if (Object.keys(item).length === 1) {
-	 // $(".results-container").append(item.response.error.description)
-	   console.log(item.response.error.description);
+	 $(".results-container").append(item.response.error.description)
 	}
 
 	userElem.text(parseInt(item.current_observation.feelslike_f) + " degrees")
