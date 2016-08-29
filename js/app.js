@@ -28,6 +28,13 @@ $(function() {
 	var userElem = template.find(".user");
 	userElem.text(parseInt(item.current_observation.feelslike_f) + " degrees")
 
+	// this should work right here
+	if (typeof item.current_observation === 'undefined') {
+		console.log("ya");
+		// $(".results-container").append(item.response.error.description)
+		console.log(item.response.error.description);
+	}
+
 	var repElem = template.find(".reputation");
 	repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph")
 
