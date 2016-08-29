@@ -62,13 +62,6 @@ var showForecast = function(item) {
 	return template;
 };
 
-// this function takes the results object from StackOverflow
-// and returns the number of results and tags to be appended to DOM
-var showSearchResults = function(query, resultNum) {
-	var results = resultNum + ' results for <strong>' + query + '</strong>';
-	return results;
-};
-
 // takes error string and turns it into displayable DOM element
 var showError = function(error){
 	var errorElem = $('.templates .error').clone();
