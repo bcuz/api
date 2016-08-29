@@ -28,26 +28,26 @@ $(function() {
 	var userElem = template.find(".user");
 
 	if (Object.keys(item).length === 1) {
-	 $(".results-container").append(item.response.error.description)
+	 $(".results-container").append(item.response.error.description);
 	}
 
-	userElem.text(parseInt(item.current_observation.feelslike_f) + " degrees")
+	userElem.text(parseInt(item.current_observation.feelslike_f) + " degrees");
 
 
 
 	var repElem = template.find(".reputation");
-	repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph")
+	repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph");
 
-	var scoreElem = template.find(".score")
-	scoreElem.text(item.current_observation.relative_humidity)
+	var scoreElem = template.find(".score");
+	scoreElem.text(item.current_observation.relative_humidity);
 
-	var postsElem = template.find(".posts")
+	var postsElem = template.find(".posts");
 	// time zone will have to be put back in when adjusted for other zones
-	var custom_time = item.current_observation.observation_time.substring(16, 34)
-	postsElem.text(custom_time)
+	var custom_time = item.current_observation.observation_time.substring(16, 34);
+	postsElem.text(custom_time);
 
 	return template;
-}
+};
 
 
 var showForecast = function(item) {
@@ -55,13 +55,13 @@ var showForecast = function(item) {
 	var template = $('.templates .forecast').clone();
 
 	var userElem = template.find(".one_day");
-	userElem.text(item.forecast.txt_forecast.forecastday[2].title + ": " + item.forecast.txt_forecast.forecastday[2].fcttext)
+	userElem.text(item.forecast.txt_forecast.forecastday[2].title + ": " + item.forecast.txt_forecast.forecastday[2].fcttext);
 
 	var repElem = template.find(".two_day");
-	repElem.text(item.forecast.txt_forecast.forecastday[4].title + ": " + item.forecast.txt_forecast.forecastday[4].fcttext)
+	repElem.text(item.forecast.txt_forecast.forecastday[4].title + ": " + item.forecast.txt_forecast.forecastday[4].fcttext);
 
 	return template;
-}
+};
 
 // this function takes the results object from StackOverflow
 // and returns the number of results and tags to be appended to DOM
@@ -96,8 +96,8 @@ var getCurrent = function(city, state) {
 		// 	var question = showQuestion(item);
 		// 	$('.results').append(question);
 
-		var answer = showCurrent(result)
-		$(".results-container").prepend(answer)
+		var answer = showCurrent(result);
+		$(".results-container").prepend(answer);
 
 
 	})
@@ -124,8 +124,8 @@ var getForecast = function(city, state) {
 		// 	var question = showQuestion(item);
 		// 	$('.results').append(question);
 
-		var answer = showForecast(result)
-		$(".results-container").append(answer)
+		var answer = showForecast(result);
+		$(".results-container").append(answer);
 
 
 	})
@@ -144,7 +144,7 @@ var getForecast = function(city, state) {
 		var state = $(this).find("select[name='state']").val();
 
 		getCurrent(city, state);
-		getForecast(city, state)
+		getForecast(city, state);
 	});
 
 });
