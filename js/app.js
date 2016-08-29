@@ -148,4 +148,3 @@ var getForecast = function(city, state) {
 	});
 
 });
-
