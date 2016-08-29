@@ -20,7 +20,6 @@ $(function() {
       source: availableCities
     });
 
-
 	var showCurrent = function(item) {
 
 	var template = $('.templates .current-weather').clone();
