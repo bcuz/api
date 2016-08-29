@@ -101,13 +101,6 @@ var getForecast = function(city, state) {
 	})
 	.done(function(result){ //this waits for the ajax to return with a succesful promise object
 		// console.log(result);
-		// var searchResults = showSearchResults(request.tagged, result.items.length);
-		// $('.search-results').html(searchResults);
-		// //$.each is a higher order function. It takes an array and a function as an argument.
-		// //The function is executed once for each item in the array.
-		// $.each(result.items, function(i, item) {
-		// 	var question = showQuestion(item);
-		// 	$('.results').append(question);
 
 		var answer = showForecast(result);
 		$(".results-container").append(answer);
