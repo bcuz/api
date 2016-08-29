@@ -25,15 +25,12 @@ $(function() {
 
 	var template = $('.templates .current-weather').clone();
 
-	var userElem = template.find(".user");
-
 	if (Object.keys(item).length === 1) {
 	 $(".results-container").append(item.response.error.description);
 	}
 
+	var userElem = template.find(".user");
 	userElem.text(parseInt(item.current_observation.feelslike_f) + " degrees");
-
-
 
 	var repElem = template.find(".reputation");
 	repElem.text(item.current_observation.wind_dir + " @ " + item.current_observation.wind_mph + " mph");
