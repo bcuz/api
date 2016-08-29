@@ -13,7 +13,10 @@ $(function() {
       "Boca Raton",
       "Houston",
       "Dallas",
-      "Detroit"
+      "Detroit",
+      "Atlanta",
+      "San Francisco",
+      "Miami"
     ];
 
 	$("input[name='city']").autocomplete({
