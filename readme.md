@@ -1,1 +1,1 @@
-https://bcuz.github.io/api/
+https://bcuz.github.io/weather-api/
