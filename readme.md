@@ -1,1 +1,1 @@
-https://bcuz.github.io/weather-api/
+No longer works. Weather Underground API has been retired
