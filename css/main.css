@@ -160,3 +160,7 @@ ul.ui-autocomplete li:hover {
 .ui-helper-hidden-accessible {
 	display: none;
 }
+
+.warning {
+	color: red;
+}
